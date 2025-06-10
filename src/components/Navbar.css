@@ -1,0 +1,159 @@
+/* Logo toggle button styles */
+.logo-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: left 0.3s ease;
+}
+
+.logo-toggle img {
+  height: 80px;
+  width: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Shift toggle button with sidebar */
+.logo-toggle.open {
+  left: 265px; /* sidebar width + some margin */
+}
+
+.logo-toggle.closed {
+  left: 15px;
+}
+
+/* Sidebar header hide logo (optional) */
+.sidebar-header .sidebar-logo {
+  display: none;
+}
+
+/* Sidebar same as before */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-links li {
+  margin-bottom: 20px;
+}
+
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  color: #bdc3c7; /* lighter gray */
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Hover and active states */
+.sidebar-links a:hover,
+.sidebar-links a:focus {
+  background-color: #34495e; /* darker highlight */
+  color: #ecf0f1; /* bright text */
+  outline: none;
+}
+
+/* Optional: Add a subtle icon placeholder on the left (you can replace with real icons) */
+.sidebar-links a::before {
+  content: "•"; /* bullet as a placeholder */
+  display: inline-block;
+  margin-right: 10px;
+  color: #27ae60; /* green accent */
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+/* Active link style (simulate by adding an active class) */
+.sidebar-links a.active {
+  background-color: #27ae60;
+  color: white;
+  font-weight: 700;
+}
+.click-me-button {
+  margin: 20px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.overlay-content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+}
+
+.overlay-content input,
+.overlay-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.close-button {
+  margin-top: 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+/* Other styles remain same */
