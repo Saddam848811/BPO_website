@@ -55,7 +55,7 @@ function App() {
   playsInline
   preload="auto"
 >
-  <source src="/public/bpovideo.mp4" type="video/mp4" />
+  <source src="/bpovideo.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
